@@ -13,16 +13,6 @@
   }
  </style>
   <title>Easybank landing page</title>
-  <!-- <style>
-    .attribution {
-      font-size: 11px;
-      text-adivgn: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style> -->
 </head>
 <body>
   <div class="position">
@@ -30,7 +20,11 @@
     <div class="img">
       <img src="./images/logo.svg" alt="logo">
     </div>
-
+    <div class="navbar-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+  </div>
    <div class="navbar">
     <ul class="menu">
     <li class="item">
@@ -54,6 +48,16 @@
 </ul>
 </div>
 </div>
+<script>
+
+const menu = document.querySelector('#mobile-menu');
+const menuList = document.querySelector('.menu');
+ 
+menu.addEventListener('click',function(){
+    menu.classList.toggle('is-active')
+    menuList.classList.toggle('active')
+})
+</script>
 
 <div class="main1">
 <div class="content1">
@@ -165,25 +169,19 @@
     <div class="navbar2">
       <ul class="menu2">
         <li class="item2">
-        <a href="/" class="link1">About Us</a>
-      </li>
+        <a href="/" class="link1">About Us</a></li>
       <li class="item2">
-          <a href="/" class="link1">Contact</a>
-      </li>
+          <a href="/" class="link1">Contact</a></li>
       <li class="item2">
-          <a href="/" class="link1">Blog</a>
-      </li>
+          <a href="/" class="link1">Blog</a></li>
       </ul>
       <ul class="menu3">
         <li class="item3">
-        <a href="/" class="link1">Careers</a>
-      </li>
+        <a href="/" class="link1">Careers</a></li>
       <li class="item3">
-          <a href="/" class="link1">Support</a>
-      </li>
+          <a href="/" class="link1">Support</a></li>
       <li class="item3">
-          <a href="/" class="link1">Privacy Policy</a>
-      </li>
+          <a href="/" class="link1">Privacy Policy</a></li>
       </ul>
     </div>
     <div class="button3">
@@ -212,6 +210,6 @@
 function changeColor(element, color) {
   element.style.filter = color ? 'invert(30%) sepia(5%) saturate(3441%) hue-rotate(97deg) brightness(96%) contrast(91%)' : ''; 
 }
-</script>  
+</script>     
 </body>
 </html>
